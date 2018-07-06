@@ -1,4 +1,4 @@
-//#include <iostream>
+﻿//#include <iostream>
 //
 //int main()
 //{
@@ -259,3 +259,70 @@
 //	system("pause");
 //	return 0;
 //}
+//1.20******************************
+//#include <iostream>
+//#include "Sales_item.h"
+//int main()
+//{
+//	
+//	Sales_item item1, item2;
+//	std::cin >> item1 >> item2;
+//	std::cout << item1 << " "<<item2 << std::endl;
+//	system ("pause");
+//	return 0;
+//
+//}
+
+//1.21*******************************
+//#include <iostream>
+//#include "include\Sales_item.h"
+//int main()
+//{
+//	Sales_item item1, item2;
+//	std::cin >> item1 >> item2;
+//	if (item1.isbn() == item2.isbn())
+//	{
+//		std::cout << item1 + item2 << std::endl;
+//		system("pause");
+//		return 0;
+//	}
+//	else
+//	{
+//		std::cout << "Data must refer to same ISBN."<< std::endl;
+//		system("pause");   
+//		return -1;
+//	}
+//	
+//}
+//1.22********************************
+
+#include <iostream>
+#include "include/Sales_item.h"
+
+int main()
+{
+	Sales_item total;
+	if (std::cin >> total) {
+		Sales_item trans;
+		while (std::cin >> trans) {
+			if (total.isbn() == trans.isbn())
+				total += trans;
+			else {
+				std::cout << "--------sum ones------------" << std::endl;
+				std::cout << total << std::endl;
+				std::cout <<"                   "<<"book code is "<< trans.isbn() << std::endl;
+				std::cout << "--------sum end-------------" << std::endl;
+				
+			}
+
+		}
+		
+	}
+	else {
+		std::cerr << "No data?!" << std::endl;
+		system("pause");
+		return -1;
+	}
+
+	return 0;
+}
