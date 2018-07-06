@@ -233,29 +233,29 @@
 //	return 0;
 //}
 
-#include <iostream>
-int main()
-{
-	int yuanlai = 0, val = 0;
-	if (std::cin >> yuanlai)
-	{
-		int count = 1;
-		for (; std::cin >> val;)
-		{
-			if (val == yuanlai)
-			{
-				++count;
-			}
-			else
-			{
-				std::cout << yuanlai << "有" << count << std::endl;
-				yuanlai = val;
-				count = 1;
-			}
-
-		}
-		std::cout << yuanlai << "有" << count << std::endl;
-	}
-	system("pause");
-	return 0;
-}
+//#include <iostream>
+//int main()
+//{
+//	int yuanlai = 0, val = 0;
+//	if (std::cin >> yuanlai)
+//	{
+//		int count = 1;
+//		for (; std::cin >> val;)
+//		{
+//			if (val == yuanlai)
+//			{
+//				++count;
+//			}
+//			else
+//			{
+//				std::cout << yuanlai << "有" << count << std::endl;
+//				yuanlai = val;
+//				count = 1;
+//			}
+//
+//		}
+//		std::cout << yuanlai << "有" << count << std::endl;
+//	}
+//	system("pause");
+//	return 0;
+//}
